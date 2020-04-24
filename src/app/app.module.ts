@@ -20,6 +20,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { DishService } from './services/dish.service';
+import { PromotionsService } from './services/promotions.service';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
@@ -45,7 +46,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     MatButtonModule,
     AppRoutingModule
   ],
-  providers: [DishService],
+  providers: [DishService, PromotionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
