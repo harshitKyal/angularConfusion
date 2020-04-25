@@ -14,7 +14,7 @@ export class DishService {
   }
 
   getDish(id: number): Promise<Dish> {
-    return Promise.resolve(DISHES.filter((dish) => (dish.id === id))[0]);
+    return Promise.resolve(DISHES.filter((dish) => (dish.id === id.toString()))[0]);
   }
 
   getFeaturedDish(): Promise<Dish> {
