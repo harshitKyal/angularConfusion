@@ -37,6 +37,9 @@ import { LeaderService } from './services/leader.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { LoginComponent } from './login/login.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { baseURL } from './shared/baseurl';
+
 @NgModule({
   schemas: [NO_ERRORS_SCHEMA],
   declarations: [
@@ -69,9 +72,10 @@ import { LoginComponent } from './login/login.component';
     FormsModule ,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
-    MatSliderModule
+    MatSliderModule,
+    HttpClientModule
   ],
-  providers: [DishService, PromotionsService, LeaderService],
+  providers: [DishService, PromotionsService, LeaderService, {provide: 'BaseURL', useValue: baseURL}],
   bootstrap: [AppComponent],
   entryComponents: [
     LoginComponent
