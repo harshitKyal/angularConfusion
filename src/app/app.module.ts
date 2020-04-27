@@ -33,7 +33,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DishService } from './services/dish.service';
 import { PromotionsService } from './services/promotions.service';
 import { LeaderService } from './services/leader.service';
-
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { LoginComponent } from './login/login.component';
 
@@ -75,7 +75,7 @@ import { baseURL } from './shared/baseurl';
     MatSliderModule,
     HttpClientModule
   ],
-  providers: [DishService, PromotionsService, LeaderService, {provide: 'BaseURL', useValue: baseURL}],
+  providers: [DishService, PromotionsService, LeaderService, ProcessHTTPMsgService, {provide: 'BaseURL', useValue: baseURL}],
   bootstrap: [AppComponent],
   entryComponents: [
     LoginComponent
